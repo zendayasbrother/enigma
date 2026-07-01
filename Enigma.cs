@@ -176,29 +176,16 @@ while (validChoice == false)
 
    }
 
-
-
-
 }
 
-
-
-
 // Generate random code
-
-
 Random random = new Random();
 string code = "";
-
-
-
 
 for (int i = 0; i < digitCount; i++)
 {
   code += random.Next(1, 7).ToString(); // Turns the code into a string
 }
-
-
 
 
 Console.WriteLine("\nGameplay Instructions: ");
@@ -207,10 +194,6 @@ Console.WriteLine("A plus sign (+) means a correct digit in the right position."
 Console.WriteLine("A minus sign (-) means a correct digit in the wrong position.");
 Console.WriteLine("And a hashtag (#) indicates completely incorrect digits that are not in the code.");
 Console.WriteLine($"You have {maxAttempts} guesses. Good luck!! \n");
-
-
-
-
 
 
 // Gameplay
@@ -227,9 +210,6 @@ for (int attempts = 0; attempts < maxAttempts; attempts++)
    attemptsUsed = attempts + 1;
    Console.WriteLine($"Attempt {attemptsUsed}/{maxAttempts}: ");
    guess = Console.ReadLine();
-
-
-
 
 // Validate guess
    reAttempts = 0;
@@ -262,15 +242,9 @@ for (int attempts = 0; attempts < maxAttempts; attempts++)
                }
            }
        }
-
-
-
-
+       
        if (isValidGuess) break;
    }
-
-
-
 
 // Generate hint
    int plusCount = 0; // Correct digit in correct position
